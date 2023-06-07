@@ -13,16 +13,15 @@ export default function FoodScreen() {
       next: (snapshot) => {
         const foods = [];
         snapshot.docs.forEach((doc) => {
-          console.log(doc.data());
           foods.push({
             id: doc.id,
             ...doc.data(),
           });
         });
         setFullData(foods);
+        setSearchData(foods);
       },
     });
-    setSearchData(fullData);
     return () => getFoods();
   }, []);
 

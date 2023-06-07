@@ -14,16 +14,15 @@ export default function ListScreen() {
       next: (snapshot) => {
         const locations = [];
         snapshot.docs.forEach((doc) => {
-          console.log(doc.data());
           locations.push({
             id: doc.id,
             ...doc.data(),
           });
         });
         setFullData(locations);
+        setSearchData(locations);
       },
     });
-    setSearchData(fullData)
     return ()=> getLocations()
   }, []);
 

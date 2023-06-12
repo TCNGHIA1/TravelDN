@@ -45,7 +45,8 @@ export default function FoodScreen() {
     <View
       style={{
         flex: 1,
-        margin: 10,
+        marginTop: 10,
+        marginHorizontal:10
       }}
     >
       <View
@@ -70,6 +71,7 @@ export default function FoodScreen() {
           }}
         ></TextInput>
       </View>
+      <View style={{flex:1}}>
       <Text
         style={{
           fontSize: 20,
@@ -79,7 +81,7 @@ export default function FoodScreen() {
         Món ngon Đà thành
       </Text>
       {fullData.length > 0 && (
-        <View>
+        <View style={{flex:1}}>
           <FlatList
           horizontal={false}
           columnWrapperStyle={{ flexWrap: "wrap", flex: 1, marginTop: 5 }}
@@ -91,6 +93,7 @@ export default function FoodScreen() {
         />
         </View>
       )}
+      </View>
     </View>
   );
 }

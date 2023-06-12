@@ -14,17 +14,21 @@ const Tab = createBottomTabNavigator();
 
 const Locations = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="List" component={ListScreen} />
-      <Stack.Screen name="Detail" component={Detail} />
+    <Stack.Navigator>
+      <Stack.Screen name="List" component={ListScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="Detail" component={Detail} options={{
+        headerTitle: "Chi tiết",
+      }}/>
     </Stack.Navigator>
   );
 };
 const Foods = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Food" component={FoodScreen} />
-      <Stack.Screen name="DetailFood" component={DetailFood} />
+    <Stack.Navigator>
+      <Stack.Screen name="Food" component={FoodScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="DetailFood" component={DetailFood} options={{
+        headerTitle: "Chi tiết",
+      }}/>
     </Stack.Navigator>
   );
 };

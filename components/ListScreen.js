@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, FlatList, TextInput } from "react-native";
 import Item from "./ItemLocation";
-import { addDoc, collection, getDoc, onSnapshot } from "firebase/firestore";
+import {collection, onSnapshot } from "firebase/firestore";
 import { FIREBASE_DB } from "../firebaseConfig.js";
 export default function ListScreen() {
   const [fullData, setFullData] = useState([]);
@@ -72,6 +72,8 @@ export default function ListScreen() {
           }}
         ></TextInput>
       </View>
+      {/* List locations */}
+      <View style={{flex:1}}>
       <Text
         style={{
           fontSize: 20,
@@ -81,7 +83,7 @@ export default function ListScreen() {
         Danh sách địa điểm
       </Text>
       {fullData.length> 0 && (
-        <View>
+        <View style={{flex:1}}>
           <FlatList
         showsVerticalScrollIndicator={false}
         data={searchData}
@@ -90,6 +92,7 @@ export default function ListScreen() {
       />
         </View>
       )}
+      </View>
     </View>
   );
 }

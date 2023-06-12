@@ -23,7 +23,7 @@ export default function DetailFood({ route }) {
       }}
     >
       <Swiper
-        containerStyle={{flex: 0.5,marginTop: 30,}}
+        containerStyle={{flex: 0.5}}
        autoplay={true}>
         {data.hinhAnh.map((image, index) => (
           <View

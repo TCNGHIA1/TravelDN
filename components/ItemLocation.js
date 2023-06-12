@@ -21,7 +21,7 @@ export default function Item(props) {
       <View
         style={{
           flexDirection: "row",
-          marginTop: 10,
+          marginVertical:5,
           backgroundColor: "#FFEDDE",
           borderRadius: 10,
           padding: 10,

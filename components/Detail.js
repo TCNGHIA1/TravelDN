@@ -21,7 +21,7 @@ export default function Detail({ route }) {
       }}
     >
       <Swiper
-        containerStyle={{flex: 0.5,marginTop: 30,}}
+        containerStyle={{flex: 0.5}}
        autoplay={true}>
         {data.hinhAnh.map((image, index) => (
           <View
@@ -29,7 +29,7 @@ export default function Detail({ route }) {
           >
             <Image
               source={{ uri: image }}
-              style={{borderRadius:10, width: "100%", height: "100%", resizeMode: "cover" }}
+              style={{borderRadius:10, width: "100%", height: "100%"}}
             />
           </View>
         ))}
